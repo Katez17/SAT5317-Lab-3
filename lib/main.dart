@@ -10,6 +10,7 @@ void main() {
 }
 
 class StressMonitorApp extends StatelessWidget {
+  const StressMonitorApp({super.key});
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -29,3 +30,4 @@ class StressMonitorApp extends StatelessWidget {
     );
   }
 }
+
