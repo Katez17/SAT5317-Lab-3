@@ -1,30 +1,47 @@
 import 'package:flutter/material.dart';
 
 class ConnectDeviceScreen extends StatelessWidget {
+  const ConnectDeviceScreen({super.key}); // Add Key parameter
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Connect Device'),
+        title: const Text('Connect Device'),
       ),
-      body: Center(
+      body: Padding(
+        padding: const EdgeInsets.all(20.0), // Add padding for better spacing
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start, // Align content to the left
           children: [
-            Text('Follow these steps to pair your device and start tracking your stress data.'),
-            SizedBox(height: 20),
+            const Text(
+              'Follow these steps to pair your device and start tracking your stress data.',
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 20),
+            // Instructions
+            const Text('1. Ensure your device is powered on.',
+                style: TextStyle(fontSize: 14)),
+            const SizedBox(height: 10),
+            const Text('2. Enable Bluetooth or Wi-Fi on your device.',
+                style: TextStyle(fontSize: 14)),
+            const SizedBox(height: 10),
+            const Text('3. Select your device from the list below.',
+                style: TextStyle(fontSize: 14)),
+            const SizedBox(height: 30),
+            // Device Pairing Options
             ListTile(
-              title: Text('Apple Watch'),
+              title: const Text('Apple Watch'),
               trailing: ElevatedButton(
                 onPressed: () {},
-                child: Text('Pair'),
+                child: const Text('Pair'),
               ),
             ),
             ListTile(
-              title: Text('Device XYZ'),
+              title: const Text('Device XYZ'),
               trailing: ElevatedButton(
                 onPressed: () {},
-                child: Text('Pair'),
+                child: const Text('Pair'),
               ),
             ),
           ],
