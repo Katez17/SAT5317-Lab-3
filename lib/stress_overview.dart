@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class StressOverviewScreen extends StatelessWidget {
+  const StressOverviewScreen({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
