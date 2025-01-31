@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class DailyCheckInScreen extends StatelessWidget {
+  const DailyCheckInScreen({super.key}); // Add Key parameter
   @override
   Widget build(BuildContext context) {
     return Scaffold(
