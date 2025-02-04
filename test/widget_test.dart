@@ -26,4 +26,3 @@ void main() {
 
     expect(find.byType(DailyCheckInScreen), findsOneWidget);
   });
-}
