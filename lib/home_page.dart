@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key}); // Add Key parameter
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: Colors.blue.shade50, // Light blue background for the whole page
+        color: Colors.blue.shade50,
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -16,17 +16,17 @@ class HomePage extends StatelessWidget {
               const Text(
                 'Home Page',
                 style: TextStyle(
-                  color: Colors.blue, // Blue text
-                  fontWeight: FontWeight.bold, // Bold text
-                  fontSize: 32, // Larger font size
+                  color: Colors.blue,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 32,
                 ),
               ),
-              const SizedBox(height: 40), // Spacing below the title
+              const SizedBox(height: 40),
 
               // Start Daily Check-in Button
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blue, // Blue button background
+                  backgroundColor: Colors.blue,
                 ),
                 onPressed: () {
                   Navigator.pushNamed(context, '/daily-checkin');
@@ -34,17 +34,17 @@ class HomePage extends StatelessWidget {
                 child: const Text(
                   'Start Daily Check-in',
                   style: TextStyle(
-                    color: Colors.white, // White text for contrast
-                    fontWeight: FontWeight.bold, // Bold text
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
-              const SizedBox(height: 15), // Spacing between buttons
+              const SizedBox(height: 15),
 
               // Connect Device Button
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blue, // Blue button background
+                  backgroundColor: Colors.blue,
                 ),
                 onPressed: () {
                   Navigator.pushNamed(context, '/connect-device');
@@ -62,7 +62,7 @@ class HomePage extends StatelessWidget {
               // Stress Overview Button
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blue, // Blue button background
+                  backgroundColor: Colors.blue,
                 ),
                 onPressed: () {
                   Navigator.pushNamed(context, '/stress-overview');
@@ -77,10 +77,46 @@ class HomePage extends StatelessWidget {
               ),
               const SizedBox(height: 15),
 
+              // Query Heart Rate Button
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blue,
+                ),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/query-heart-rate');
+                },
+                child: const Text(
+                  'Query Heart Rate',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              const SizedBox(height: 15),
+
+              // ✅ Save Heart Rate Button (NEW)
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blue,
+                ),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/save-heart-rate');
+                },
+                child: const Text(
+                  'Save Heart Rate',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              const SizedBox(height: 15),
+
               // Log Out Button
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blue, // Blue button background
+                  backgroundColor: Colors.blue,
                 ),
                 onPressed: () {
                   Navigator.pushNamed(context, '/secure-login');
@@ -100,3 +136,4 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+
