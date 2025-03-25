@@ -4,13 +4,16 @@ import 'home_page.dart';
 import 'connect_device.dart';
 import 'daily_checkin.dart';
 import 'stress_overview.dart';
+import 'query_data.dart'; 
+import 'save_data.dart';
 
 void main() {
-  runApp(StressMonitorApp());
+  runApp(const StressMonitorApp());
 }
 
 class StressMonitorApp extends StatelessWidget {
   const StressMonitorApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -25,9 +28,10 @@ class StressMonitorApp extends StatelessWidget {
         '/connect-device': (context) => ConnectDeviceScreen(),
         '/daily-checkin': (context) => DailyCheckInScreen(),
         '/stress-overview': (context) => StressOverviewScreen(),
-        '/secure-login': (context) => SecureLoginScreen()
+        '/secure-login': (context) => SecureLoginScreen(),
+        '/query-heart-rate': (context) => QueryData(), 
+        '/save-heart-rate': (context) => SaveData(),
       },
     );
   }
 }
-
