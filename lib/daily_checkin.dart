@@ -28,7 +28,7 @@ class _DailyCheckInScreenState extends State<DailyCheckInScreen> {
       headers: {"Content-Type": "application/json"},
       body: json.encode({
         "user_id": "kate_test", // Replace with real user ID if needed
-        "date": DateTime.now().toIso8601String(),
+        "date": DateTime.now().toUtc().toIso8601String().split('.').first + 'Z',
         "stressLevel": stressLevel.toInt(),
         "moodRating": moodRating.toInt(),
         "sleepQuality": sleepQuality.toInt(),
@@ -94,3 +94,4 @@ class _DailyCheckInScreenState extends State<DailyCheckInScreen> {
     );
   }
 }
+
