@@ -62,6 +62,7 @@ class _SaveDataPageState extends State<SaveData> {
               child: Padding(
                 padding: const EdgeInsets.only(top: 20.0),
                 child: ElevatedButton(
+                  onPressed: _updateText,
                   child: const Text(
                     'Store Heart Rate',
                     style: TextStyle(
@@ -69,7 +70,6 @@ class _SaveDataPageState extends State<SaveData> {
                       fontSize: 20,
                     ),
                   ),
-                  onPressed: _updateText,
                 ),
               ),
             ),
