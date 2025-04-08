@@ -1,7 +1,24 @@
 import 'package:flutter/material.dart';
+import 'fitbit_service.dart'; // make sure the path is correct
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
+  void initState() {
+    super.initState();
+    _refreshTokenOnStart();
+  }
+
+  void _refreshTokenOnStart() async {
+    await FitbitService.refreshFitbitToken();
+    print("✅ Fitbit token refresh attempted on HomePage load.");
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +29,6 @@ class HomePage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // Home Page Text
               const Text(
                 'Home Page',
                 style: TextStyle(
@@ -22,8 +38,6 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 40),
-
-              // Start Daily Check-in Button
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.blue,
@@ -40,8 +54,6 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 15),
-
-              // Connect Device Button
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.blue,
@@ -58,8 +70,6 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 15),
-
-              // Stress Overview Button
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.blue,
@@ -76,8 +86,6 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 15),
-
-              // Query Heart Rate Button
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.blue,
@@ -86,7 +94,7 @@ class HomePage extends StatelessWidget {
                   Navigator.pushNamed(context, '/query-heart-rate');
                 },
                 child: const Text(
-                  'Query Heart Rate',
+                  'Get Heart Rate Data',
                   style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
@@ -94,8 +102,6 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 15),
-
-              // ✅ Save Heart Rate Button (NEW)
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.blue,
@@ -104,7 +110,7 @@ class HomePage extends StatelessWidget {
                   Navigator.pushNamed(context, '/save-heart-rate');
                 },
                 child: const Text(
-                  'Save Heart Rate',
+                  'Save Heart Rate Data',
                   style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
@@ -112,8 +118,6 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 15),
-
-              // Log Out Button
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.blue,
