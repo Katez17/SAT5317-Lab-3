@@ -24,7 +24,7 @@ Future<String> getHeartRate(String startdate, String enddate) async {
   }
 }
 
-Future<String> saveHeartRate(String collect_date) async {
+Future<String> saveHeartRate(String collectDate) async {
   // build url for AWS API gateway endpoint: saveHeartRate
   final url=Uri.parse('https://3x3yoj7fab.execute-api.us-east-2.amazonaws.com/test/saveHearRate');
   final response = await http.post(url,
@@ -32,7 +32,7 @@ Future<String> saveHeartRate(String collect_date) async {
       'Content-Type': 'application/json; charset=UTF-8'
     },
     body: jsonEncode(<String,String>{
-      "collect_date": collect_date
+      "collect_date": collectDate
     })
   );
   if(response.statusCode == 200) {
