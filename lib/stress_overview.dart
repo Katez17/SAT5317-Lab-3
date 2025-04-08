@@ -30,7 +30,7 @@ class StressOverviewScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20),
-            Text('A while ago'),
+            Text('Yesterday'),
           ],
         ),
       ),
