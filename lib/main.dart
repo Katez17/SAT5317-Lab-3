@@ -4,7 +4,7 @@ import 'home_page.dart';
 import 'connect_device.dart';
 import 'daily_checkin.dart';
 import 'stress_overview.dart';
-import 'query_data.dart'; 
+import 'get_data.dart';
 import 'save_data.dart';
 
 void main() {
@@ -22,15 +22,15 @@ class StressMonitorApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: SecureLoginScreen(),
+      home: const SecureLoginScreen(),
       routes: {
-        '/home': (context) => HomePage(),
-        '/connect-device': (context) => ConnectDeviceScreen(),
-        '/daily-checkin': (context) => DailyCheckInScreen(),
-        '/stress-overview': (context) => StressOverviewScreen(),
-        '/secure-login': (context) => SecureLoginScreen(),
-        '/query-heart-rate': (context) => QueryData(), 
-        '/save-heart-rate': (context) => SaveData(),
+        '/home': (context) => const HomePage(),
+        '/connect-device': (context) => const ConnectDeviceScreen(),
+        '/daily-checkin': (context) => const DailyCheckInScreen(),
+        '/stress-overview': (context) => const StressOverviewScreen(),
+        '/secure-login': (context) => const SecureLoginScreen(),
+        '/query-heart-rate': (context) => const GetData(),
+        '/save-heart-rate': (context) => const SaveData(),
       },
     );
   }
