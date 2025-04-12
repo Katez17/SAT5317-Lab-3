@@ -28,7 +28,7 @@ class FitbitService {
 
           // TODO: You can save these tokens in secure storage if needed
         } else {
-          print("ℹ️ Token is still valid: ${data['message']}");
+          print("Token is still valid: ${data['message']}");
         }
       } else {
         print("Failed with ${response.statusCode}: ${response.body}");
@@ -38,3 +38,4 @@ class FitbitService {
     }
   }
 }
+
