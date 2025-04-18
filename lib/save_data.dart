@@ -16,7 +16,7 @@ class _SaveDataPageState extends State<SaveData> {
   @override
   void initState() {
     super.initState();
-    _controller_collectTime.text = '2025-02-14';
+    _controller_collectTime.text = '2025-03-12';
   }
 
   @override
