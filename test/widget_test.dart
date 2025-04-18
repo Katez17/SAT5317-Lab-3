@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:project5317/api_functions.dart';
 import 'package:project5317/connect_device.dart';
 import 'package:project5317/daily_checkin.dart';
 import 'package:project5317/home_page.dart';
